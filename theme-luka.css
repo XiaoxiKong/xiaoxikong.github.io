@@ -262,10 +262,19 @@ body.theme-luka .image.avatar img {
 }
 
 body.theme-luka .site-name {
-  margin: 0 0 8px;
+  margin: 0;
   color: var(--luka-text);
   font-size: 28px;
   line-height: 1.2;
+}
+
+body.theme-luka .site-name-cn {
+  margin: 3px 0 10px;
+  color: var(--luka-accent);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
 }
 
 body.theme-luka .site-role {
@@ -400,8 +409,12 @@ body.theme-luka .hero-title em {
 body.theme-luka .hero-lede {
   max-width: 690px;
   color: var(--luka-text);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.72;
+}
+
+body.theme-luka .intro-kicker {
+  margin-bottom: 17px !important;
 }
 
 body.theme-luka .hero-actions {
