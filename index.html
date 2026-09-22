@@ -27,13 +27,14 @@
   <script src="https://kit.fontawesome.com/a860a211d3.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="font_sans_serif.css">
-  <link rel="stylesheet" href="theme-luka.css">
+  <link rel="stylesheet" href="theme-luka.css?v=20260922">
 </head>
 <body class="theme-luka">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-left">
-        <a class="wordmark" href="#about" aria-label="Back to introduction">Xiaoxi Kong <span>孔小茜</span></a>
+        <a class="wordmark" href="#about" aria-label="Xiaoxi Kong 孔小茜 — introduction"><img class="brand-avatar" src="github-avatar.png" width="28" height="28" alt=""><span class="brand-name">Xiaoxi Kong <span lang="zh-CN">孔小茜</span></span></a>
       </div>
       <div class="nav-right">
         <div class="nav-links" aria-label="Primary navigation">
@@ -54,30 +55,32 @@
     <header class="sidebar">
       <div class="profile-card">
         <div class="image avatar">
-          <img src="KongXiaoXi.jpg" alt="Xiaoxi Kong profile avatar">
+          <img src="KongXiaoXi.jpg" alt="Portrait of Xiaoxi Kong" width="1280" height="1280" fetchpriority="high">
         </div>
 
-        <h1 class="site-name">Xiaoxi Kong</h1>
-        <p class="site-name-cn" lang="zh-CN">孔小茜</p>
-        <p class="site-role">Postdoctoral Researcher · Shenzhen University</p>
-        <p class="site-email">xiaoxikong25@gmail.com</p>
+        <div class="profile-details">
+          <h1 class="site-name">Xiaoxi Kong</h1>
+          <p class="site-name-cn" lang="zh-CN">孔小茜</p>
+          <p class="site-role">Postdoctoral Researcher · Shenzhen University</p>
+          <p class="site-email"><a href="mailto:xiaoxikong25@gmail.com">xiaoxikong25@gmail.com</a></p>
 
-        <div class="social-icons">
-          <a href="mailto:xiaoxikong25@gmail.com" title="Email" aria-label="Email Xiaoxi Kong"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=uTl3BewAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar profile"><i class="ai ai-google-scholar"></i></a>
-          <a href="https://github.com/XiaoxiKong" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
-        </div>
+          <div class="social-icons">
+            <a href="mailto:xiaoxikong25@gmail.com" title="Email" aria-label="Email Xiaoxi Kong"><span>Email</span></a>
+            <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=uTl3BewAAAAJ" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar profile"><span>Scholar</span></a>
+            <a href="https://github.com/XiaoxiKong" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile"><span>GitHub</span></a>
+          </div>
 
-        <div class="availability"><span></span> Open to research collaboration</div>
+          <div class="availability"><span></span> Open to research collaboration</div>
 
-        <div class="visitor-card">
-          <div class="visitor-card-title">Based in</div>
-          <div class="visitor-card-body"><i class="fa-solid fa-location-dot"></i> Shenzhen, China</div>
+          <div class="visitor-card">
+            <div class="visitor-card-title">Based in</div>
+            <div class="visitor-card-body"><i class="fa-solid fa-location-dot"></i> Shenzhen, China</div>
+          </div>
         </div>
       </div>
     </header>
 
-    <section class="content">
+    <main class="content" id="main-content">
       <div class="section" id="about">
         <p class="section-kicker intro-kicker">Biography</p>
         <div class="section-body">
@@ -213,7 +216,7 @@
         <div class="section-body">
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="institution.svg" alt="Shenzhen University logo placeholder" class="institution-logo">
+
               <div class="experience-content">
                 <p class="exp-title"><strong>Shenzhen University</strong></p>
                 <p class="exp-detail">Postdoctoral Researcher, College of Electronics and Information Engineering</p>
@@ -225,7 +228,7 @@
 
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="institution.svg" alt="Macau University of Science and Technology logo placeholder" class="institution-logo">
+
               <div class="experience-content">
                 <p class="exp-title"><strong>Macau University of Science and Technology</strong></p>
                 <p class="exp-detail">Ph.D. in Computer Technology and Applications, Faculty of Innovation Engineering</p>
@@ -237,7 +240,7 @@
 
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="institution.svg" alt="Macau University of Science and Technology logo placeholder" class="institution-logo">
+
               <div class="experience-content">
                 <p class="exp-title"><strong>Macau University of Science and Technology</strong></p>
                 <p class="exp-detail">M.Sc. in Information Technology, Faculty of Innovation Engineering</p>
@@ -249,7 +252,7 @@
 
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="institution.svg" alt="Yangtze University logo placeholder" class="institution-logo">
+
               <div class="experience-content">
                 <p class="exp-title"><strong>Yangtze University</strong></p>
                 <p class="exp-detail">B.Eng. in Automation, School of Electronics and Information</p>
@@ -262,7 +265,7 @@
       </div>
 
       <div class="section" id="patents">
-        <div class="section-heading"><div><p class="section-kicker">05 · More</p><h2 class="section-title">Patents &amp; service</h2></div></div>
+        <div class="section-heading"><div><p class="section-kicker">05 · More</p><h2 class="section-title">Patents</h2></div></div>
         <div class="section-body">
           <div class="card project-card">
             <strong>CN118488146A</strong>: Reversible information hiding algorithm and equipment, 2024.05.
@@ -319,11 +322,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <footer class="site-footer">
       <p>
-        &copy; 2026 Xiaoxi Kong. Built for trustworthy media research.
+        &copy; 2026 Xiaoxi Kong · 孔小茜
         <br>
         <span class="template-credit"><a href="https://github.com/wzsyyh/luka-homepage-template">Luka Homepage Template</a> by <a href="https://wzsyyh.github.io/">Yuheng Yang</a></span>
       </p>
