@@ -19,7 +19,7 @@
   <link rel="icon" href="github-avatar.png" type="image/png">
   <link rel="apple-touch-icon" href="github-avatar.png">
 
-  <link rel="stylesheet" href="theme-luka.css?v=20260922b">
+  <link rel="stylesheet" href="theme-luka.css?v=20260923-warm">
 </head>
 <body class="theme-luka">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -331,6 +331,7 @@
         document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
         icon.textContent = isDark ? '☀' : '☾';
         themeToggle.setAttribute('aria-label', isDark ? 'Use light theme' : 'Use dark theme');
+        themeToggle.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
         try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (error) { /* Storage may be disabled. */ }
       }
 

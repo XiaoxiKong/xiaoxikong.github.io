@@ -1,34 +1,34 @@
-/* Xiaoxi Kong — personal academic homepage.
-   One set of layout rules for desktop and mobile. */
+/* Xiaoxi Kong — Luka warm theme.
+   Original warm palette with the corrected profile layout and readable typography. */
 :root, [data-theme="light"] {
-  --luka-bg: #ffffff;
-  --luka-text: #353a40;
-  --luka-ink: #20262c;
-  --luka-secondary: #626b73;
-  --luka-accent: #2d6575;
-  --luka-border: #e4e8eb;
-  --luka-surface: #f5f7f8;
+  --luka-bg: #f5f2eb;
+  --luka-text: #45413a;
+  --luka-ink: #211f1b;
+  --luka-secondary: #736b60;
+  --luka-accent: #ad593e;
+  --luka-border: rgba(77, 60, 43, 0.16);
+  --luka-surface: #fbf9f4;
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --luka-bg: #1b1e21;
-  --luka-text: #d2d7db;
-  --luka-ink: #f0f2f4;
-  --luka-secondary: #a3adb5;
-  --luka-accent: #8bc3d0;
-  --luka-border: #353c42;
-  --luka-surface: #252a2e;
+  --luka-bg: #1d1c19;
+  --luka-text: #d7d2c9;
+  --luka-ink: #f3efe7;
+  --luka-secondary: #aaa195;
+  --luka-accent: #dc8468;
+  --luka-border: rgba(235, 228, 216, 0.16);
+  --luka-surface: #2c2925;
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --luka-bg: #1b1e21;
-    --luka-text: #d2d7db;
-    --luka-ink: #f0f2f4;
-    --luka-secondary: #a3adb5;
-    --luka-accent: #8bc3d0;
-    --luka-border: #353c42;
-    --luka-surface: #252a2e;
+    --luka-bg: #1d1c19;
+    --luka-text: #d7d2c9;
+    --luka-ink: #f3efe7;
+    --luka-secondary: #aaa195;
+    --luka-accent: #dc8468;
+    --luka-border: rgba(235, 228, 216, 0.16);
+    --luka-surface: #2c2925;
     color-scheme: dark;
   }
 }
@@ -94,15 +94,16 @@ button { font: inherit; }
 .nav-links a.active { color: var(--luka-accent); }
 .nav-cv i, .text-link i, .project-actions i { margin-left: 4px; font-size: 10px; }
 .theme-toggle {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   padding: 0;
-  border: 0;
-  border-radius: 4px;
-  background: transparent;
-  color: var(--luka-secondary);
+  border: 1px solid var(--luka-border);
+  border-radius: 50%;
+  background: var(--luka-surface);
+  color: var(--luka-accent);
   cursor: pointer;
-  font-size: 15px;
+  font-size: 19px;
+  line-height: 1;
 }
 .theme-toggle:hover { background: var(--luka-surface); }
 .wrapper {
@@ -134,7 +135,7 @@ button { font: inherit; }
   letter-spacing: -0.025em;
   line-height: 1.25;
 }
-.site-name-cn { margin: 4px 0 15px; color: var(--luka-secondary); font-size: 16px; }
+.site-name-cn { margin: 4px 0 15px; color: var(--luka-accent); font-size: 16px; }
 .site-role { margin: 0 0 8px; font-size: 13px; line-height: 1.6; }
 .site-email { margin: 0 0 10px; font-size: 12px; overflow-wrap: anywhere; }
 .site-email a { color: var(--luka-secondary); }
@@ -200,7 +201,7 @@ button { font: inherit; }
   padding: 19px 0;
   border-top: 1px solid var(--luka-border);
 }
-.pub-year { padding-top: 2px; color: var(--luka-secondary); font-size: 12px; }
+.pub-year { padding-top: 2px; color: var(--luka-accent); font-size: 12px; }
 .pub-content .title { margin-bottom: 5px; color: var(--luka-ink); font-size: 15px; font-weight: 600; line-height: 1.55; }
 .pub-content .author { margin-bottom: 3px; color: var(--luka-secondary); font-size: 13px; }
 .pub-content .periodical { font-size: 13px; }
