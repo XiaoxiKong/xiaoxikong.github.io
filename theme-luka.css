@@ -78,11 +78,12 @@ button { font: inherit; }
   white-space: nowrap;
   font-size: 15px;
   font-weight: 600;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
 }
 .wordmark:hover { text-decoration: none; }
 .brand-avatar { width: 27px; height: 27px; border-radius: 50%; }
 .brand-name { display: inline-flex; align-items: center; gap: 7px; }
-.brand-name-cn { font-size: 12px; color: var(--luka-secondary); font-weight: 400; }
+.brand-name-cn { font: inherit; color: inherit; }
 .nav-right, .nav-links { display: flex; align-items: center; }
 .nav-right { gap: 21px; }
 .nav-links { gap: 24px; }
