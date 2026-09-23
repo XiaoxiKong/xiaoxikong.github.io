@@ -146,18 +146,20 @@ button { font: inherit; }
 .section-title {
   margin: 0 0 18px;
   color: var(--luka-ink);
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
   line-height: 1.35;
 }
 .section-heading {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 18px;
   margin-bottom: 18px;
 }
+.section-heading > div { flex: 1; min-width: 0; }
 .section-heading .section-title { margin: 0; }
 .section-body p { margin: 0 0 14px; }
 .hero-lede { font-size: 15px; line-height: 1.8; }
@@ -284,7 +286,7 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
 }
 
-/* Restored Luka details: restrained heading accents and local vector icons. */
+/* Restrained editorial headings; vector icons remain for functional links. */
 .icon-definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
 .ui-icon {
   display: inline-block;
@@ -299,25 +301,17 @@ button { font: inherit; }
   vertical-align: -0.15em;
 }
 .section-title {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-bottom: 12px;
+  width: 100%;
 }
 .section-title::after {
   content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 42px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--luka-accent);
+  flex: 1 1 16px;
+  height: 1px;
+  margin-left: 20px;
+  background: var(--luka-border);
 }
-.section-icon { width: 21px; height: 21px; color: var(--luka-accent); }
-.research-card h3, .featured-project h3 { display: flex; align-items: center; gap: 8px; }
-.research-card h3 .ui-icon, .featured-project h3 .ui-icon { color: var(--luka-accent); }
 .social-icons { gap: 12px; }
 .social-icons a {
   justify-content: center;
@@ -368,8 +362,7 @@ button { font: inherit; }
   .social-icons { gap: 10px; }
   .social-icons a { font-size: 11px; gap: 4px; }
   .social-icons .ui-icon { width: 14px; height: 14px; }
-  .section-title { gap: 8px; }
-  .section-icon { width: 19px; height: 19px; }
+  .section-title::after { margin-left: 12px; }
 }
 @media (max-width: 460px) {
   .experience-item { gap: 10px; }
