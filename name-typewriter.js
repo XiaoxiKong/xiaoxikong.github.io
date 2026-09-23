@@ -1,7 +1,7 @@
-/* One synchronized name animation for the profile and navigation. */
+/* A quiet bilingual name animation for the profile only. */
 (function () {
   'use strict';
-  const targets = Array.from(document.querySelectorAll('[data-name-typing]'));
+  const targets = Array.from(document.querySelectorAll('.profile-details [data-name-typing]'));
   if (!targets.length) return;
   const toggle = document.getElementById('nameAnimationToggle');
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -18,6 +18,7 @@
   function render() {
     const name = names[nameIndex];
     const text = Array.from(name.text).slice(0, letters).join('');
+    document.documentElement.classList.toggle('name-is-typing', !paused && !preference.matches && letters < Array.from(name.text).length);
     targets.forEach(function (target) {
       target.textContent = text;
       target.setAttribute('lang', name.lang);
@@ -45,18 +46,18 @@
       if (letters === 0) {
         nameIndex = (nameIndex + 1) % names.length;
         deleting = false;
-        schedule(300);
+        schedule(100);
       } else {
-        schedule(65);
+        schedule(45);
       }
     } else {
       letters += 1;
       render();
       if (letters === Array.from(names[nameIndex].text).length) {
         deleting = true;
-        schedule(2600);
+        schedule(4500);
       } else {
-        schedule(nameIndex === 1 ? 220 : 115);
+        schedule(nameIndex === 1 ? 240 : 130);
       }
     }
   }
@@ -76,7 +77,7 @@
       toggle.title = paused ? 'Resume name animation' : 'Pause name animation';
       toggle.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
     }
-    if (enabled) schedule(2600);
+    if (enabled) schedule(4500);
   }
 
   if (toggle) {

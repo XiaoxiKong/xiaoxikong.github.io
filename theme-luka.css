@@ -81,7 +81,8 @@ button { font: inherit; }
 }
 .wordmark:hover { text-decoration: none; }
 .brand-avatar { width: 27px; height: 27px; border-radius: 50%; }
-.brand-name { display: inline-flex; align-items: center; }
+.brand-name { display: inline-flex; align-items: center; gap: 7px; }
+.brand-name-cn { font-size: 12px; color: var(--luka-secondary); font-weight: 400; }
 .nav-right, .nav-links { display: flex; align-items: center; }
 .nav-right { gap: 21px; }
 .nav-links { gap: 24px; }
@@ -342,9 +343,8 @@ button { font: inherit; }
   border: 0;
 }
 .name-heading { display: flex; align-items: center; gap: 6px; }
-.site-name { white-space: nowrap; }
-.name-typewriter { display: inline-block; width: 6em; min-width: 0; }
-.brand-name .name-typewriter { width: 6em; }
+.site-name { white-space: nowrap; width: 6em; flex: 0 0 6em; min-height: 1.25em; }
+.name-typewriter { display: inline; }
 .name-animation-enabled .name-heading { margin-bottom: 16px; }
 .name-animation-enabled .typewriter-fallback { display: none; }
 .typing-cursor {
@@ -355,7 +355,8 @@ button { font: inherit; }
   background: var(--luka-accent);
   vertical-align: -0.04em;
 }
-.name-animation-enabled .typing-cursor { display: inline-block; animation: cursor-blink 1.1s step-end infinite; }
+.name-animation-enabled .typing-cursor { display: inline-block; opacity: 0; }
+.name-animation-enabled.name-is-typing .typing-cursor { opacity: 1; }
 .name-animation-toggle {
   flex: 0 0 22px;
   width: 22px;
@@ -369,7 +370,6 @@ button { font: inherit; }
 }
 .name-animation-toggle:hover { color: var(--luka-accent); }
 .name-animation-toggle[hidden] { display: none; }
-@keyframes cursor-blink { 0%, 45% { opacity: 1; } 46%, 100% { opacity: 0; } }
 @media (max-width: 920px) and (min-width: 701px) {
   .experience-content { grid-template-columns: 1fr; }
   .exp-period { grid-column: 1; grid-row: auto; justify-self: start; }
