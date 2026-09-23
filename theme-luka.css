@@ -61,7 +61,7 @@ button { font: inherit; }
   border-bottom: 1px solid var(--luka-border);
 }
 .nav-container {
-  max-width: 1096px;
+  max-width: 1200px;
   height: 100%;
   padding: 0 28px;
   margin: 0 auto;
@@ -104,25 +104,23 @@ button { font: inherit; }
 }
 .theme-toggle:hover { background: var(--luka-surface); }
 .wrapper {
-  display: grid;
-  grid-template-columns: 216px minmax(0, 1fr);
-  column-gap: 72px;
-  align-items: start;
-  max-width: 1096px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 48px 28px 0;
 }
-.sidebar { position: sticky; top: 98px; min-width: 0; }
-.profile-card, .profile-details { min-width: 0; }
-.image.avatar { margin: 0 0 22px; }
+.profile-intro { display: flow-root; }
+.profile-details { float: right; width: 30%; max-width: 310px; min-width: 0; margin: 0 0 24px 48px; padding-left: 28px; border-left: 1px solid var(--luka-border); text-align: center; }
+.about-copy { min-width: 0; }
+#about .section-title { width: auto; }
+.profile-details .name-heading, .profile-details .social-icons { justify-content: center; }
+.image.avatar { width: min(100%, 184px); margin: 0 auto 18px; overflow: hidden; border-radius: 8px; }
 .image.avatar img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
+  object-position: center 48%;
 }
 .site-name {
   margin: 0;
@@ -164,8 +162,8 @@ button { font: inherit; }
 .section-body p { margin: 0 0 14px; }
 .hero-lede { font-size: 15px; line-height: 1.8; }
 #about .section-body > p:last-child { margin-bottom: 0; }
-.research-list { margin: 0; padding-left: 22px; list-style: disc; color: var(--luka-text); font-size: 14px; line-height: 1.75; }
-.research-list li { padding-left: 3px; }
+.research-list { margin: 0; padding-left: 24px; list-style-type: "◇"; color: var(--luka-text); font-size: 14px; line-height: 1.75; }
+.research-list li { padding-left: 9px; }
 .research-list li + li { margin-top: 10px; }
 .research-list li::marker { color: var(--luka-accent); }
 .featured-projects { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
@@ -209,7 +207,7 @@ button { font: inherit; }
 .compact-section { margin-bottom: 36px; }
 .awards-grid { display: grid; gap: 12px; }
 .award-text { font-size: 14px; }
-.site-footer { grid-column: 2; padding: 0 0 30px; }
+.site-footer { padding: 0 0 30px; }
 .site-footer p { margin: 0; padding-top: 18px; border-top: 1px solid var(--luka-border); color: var(--luka-secondary); font-size: 11px; }
 .skip-link {
   position: fixed;
@@ -222,7 +220,8 @@ button { font: inherit; }
 }
 .skip-link:focus { transform: none; }
 @media (max-width: 920px) {
-  .wrapper { grid-template-columns: 184px minmax(0, 1fr); column-gap: 40px; padding-left: 24px; padding-right: 24px; }
+  .wrapper { padding-left: 24px; padding-right: 24px; }
+  .profile-details { width: 32%; margin-left: 28px; padding-left: 20px; }
   .nav-links { gap: 16px; }
   .nav-right { gap: 15px; }
   .section-heading { flex-wrap: wrap; gap: 5px 18px; }
@@ -234,11 +233,9 @@ button { font: inherit; }
   .nav-right { gap: 12px; }
   .wordmark { font-size: 14px; gap: 8px; }
 
-  .wrapper { display: block; padding: 30px 22px 0; }
-  .sidebar { position: static; margin-bottom: 34px; }
-  .profile-card { display: grid; grid-template-columns: 136px minmax(0, 1fr); gap: 24px; align-items: start; }
-  .image.avatar { margin: 0; }
-  .profile-details { grid-column: 2; grid-row: 1; }
+  .wrapper { padding: 30px 22px 0; }
+  .profile-details { float: none; width: 100%; max-width: none; margin: 0 0 32px; padding-left: 0; border-left: 0; }
+  .image.avatar { width: 160px; }
   .site-name { font-size: 23px; }
   .site-name-cn { margin-bottom: 10px; font-size: 15px; }
   .site-role { font-size: 12px; margin-bottom: 5px; }
@@ -256,7 +253,6 @@ button { font: inherit; }
   .nav-right { gap: 8px; }
   .nav-cv i { display: none; }
   .wrapper { padding: 26px 18px 0; }
-  .profile-card { grid-template-columns: 108px minmax(0, 1fr); gap: 18px; }
   .site-name { font-size: 22px; }
   .site-email { font-size: 10.5px; }
   .visitor-card { font-size: 11px; }
@@ -268,7 +264,6 @@ button { font: inherit; }
   .wordmark { gap: 6px; font-size: 13px; }
 
   .brand-avatar { width: 24px; height: 24px; }
-  .profile-card { grid-template-columns: 84px minmax(0, 1fr); gap: 15px; }
   .site-name { font-size: 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
