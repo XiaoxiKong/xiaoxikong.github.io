@@ -189,6 +189,8 @@ button { font: inherit; }
   min-height: 30px;
   font-size: 12px;
 }
+.project-actions a { gap: 6px; }
+.project-actions .ui-icon { width: 14px; height: 14px; }
 .publications ol.bibliography { margin: 0; padding: 0; list-style: none; }
 .publications ol.bibliography li {
   display: grid;
@@ -343,7 +345,7 @@ button { font: inherit; }
   white-space: nowrap;
   border: 0;
 }
-.name-heading { display: flex; align-items: center; gap: 6px; }
+.name-heading { display: flex; align-items: center; }
 .site-name { white-space: nowrap; width: 6em; flex: 0 0 6em; min-height: 1.25em; }
 .name-typewriter { display: inline; }
 .name-animation-enabled .name-heading { margin-bottom: 16px; }
@@ -358,19 +360,6 @@ button { font: inherit; }
 }
 .name-animation-enabled .typing-cursor { display: inline-block; opacity: 0; }
 .name-animation-enabled.name-is-typing .typing-cursor { opacity: 1; }
-.name-animation-toggle {
-  flex: 0 0 22px;
-  width: 22px;
-  height: 28px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--luka-secondary);
-  cursor: pointer;
-  font-size: 12px;
-}
-.name-animation-toggle:hover { color: var(--luka-accent); }
-.name-animation-toggle[hidden] { display: none; }
 @media (max-width: 920px) and (min-width: 701px) {
   .experience-content { grid-template-columns: 1fr; }
   .exp-period { grid-column: 1; grid-row: auto; justify-self: start; }
@@ -387,7 +376,6 @@ button { font: inherit; }
   .institution-logo { flex-basis: 34px; width: 34px; height: 34px; }
   .name-heading { gap: 3px; }
   .site-name { font-size: 20px; }
-  .name-animation-toggle { flex-basis: 18px; width: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .typing-cursor { display: none !important; animation: none !important; }
