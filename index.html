@@ -53,16 +53,17 @@
 
   <div class="wrapper">
     <main class="content" id="main-content">
-      <section class="section profile-intro" id="about">
+      <div class="intro-flow">
         <header class="profile-details">
           <div class="image avatar">
             <img src="KongXiaoXi.jpg" alt="Portrait of Xiaoxi Kong" width="1280" height="1280" fetchpriority="high">
           </div>
-          <div class="name-heading">
-            <h1 class="site-name"><span class="sr-only">Xiaoxi Kong · 孔小茜</span><span class="name-typewriter" data-name-typing lang="en" aria-hidden="true">Xiaoxi Kong</span><span class="typing-cursor" aria-hidden="true"></span></h1>
+          <div class="profile-identity">
+            <div class="name-heading">
+              <h1 class="site-name"><span class="sr-only">Xiaoxi Kong · 孔小茜</span><span class="name-typewriter" data-name-typing lang="en" aria-hidden="true">Xiaoxi Kong</span><span class="typing-cursor" aria-hidden="true"></span></h1>
+            </div>
+            <p class="site-name-cn typewriter-fallback" lang="zh-CN">孔小茜</p>
           </div>
-          <p class="site-name-cn typewriter-fallback" lang="zh-CN">孔小茜</p>
-          <p class="site-role">Postdoctoral Researcher · Shenzhen University</p>
           <p class="site-email"><a href="mailto:xiaoxikong25@gmail.com">xiaoxikong25@gmail.com</a></p>
 
           <div class="social-icons">
@@ -71,19 +72,14 @@
             <a href="https://github.com/XiaoxiKong" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg><span>GitHub</span></a>
           </div>
 
-          <div class="visitor-card">
-            <div class="visitor-card-title">Based in</div>
-            <div class="visitor-card-body">Shenzhen, China</div>
-          </div>
         </header>
-        <div class="about-copy">
+        <section class="section about-copy" id="about">
           <h2 class="section-title"><span class="heading-emoji" aria-hidden="true">👋</span><span>About me</span></h2>
           <div class="section-body">
             <p class="hero-lede">I am <strong>Xiaoxi Kong (孔小茜)</strong>, a Postdoctoral Researcher at the College of Electronics and Information Engineering, Shenzhen University, working with <strong>Prof. Bin Li</strong>. My research focuses on AIGC watermarking, multimedia content security, and trustworthy provenance for AI-generated media.</p>
             <p>I received my Ph.D. and M.Sc. degrees from the Faculty of Innovation Engineering, Macau University of Science and Technology, advised by <strong>Prof. Zhanchuan Cai</strong>. My earlier research centered on high-fidelity reversible data hiding.</p>
           </div>
-        </div>
-      </section>
+        </section>
 
       <div class="section" id="research">
         <div class="section-heading">
@@ -97,27 +93,33 @@
         </ul>
       </div>
 
+      </div>
+
       <div class="section" id="projects">
         <div class="section-heading">
           <div><h2 class="section-title"><span class="heading-emoji" aria-hidden="true">🧩</span><span>Projects</span></h2></div>
         </div>
         <div class="featured-projects">
           <article class="featured-project featured-project-main">
-            <h3>MarkCleaner</h3>
-            <p>High-fidelity watermark removal through imperceptible micro-geometric perturbations, designed to preserve the visual identity of the underlying image.</p>
-
-            <div class="project-actions">
-              <a href="https://xiaoxikong.github.io/MarkCleaner/" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg><span>Project page</span></a>
-              <a href="https://github.com/XiaoxiKong/MarkCleaner" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg><span>Source code</span></a>
+            <a class="project-figure" href="markcleaner-project.png" target="_blank" rel="noopener" aria-label="View full-size MarkCleaner diagram"><img src="markcleaner-project.png" alt="MarkCleaner watermark-removal overview" width="2000" height="1928" loading="lazy"></a>
+            <div class="project-copy">
+              <h3>MarkCleaner</h3>
+              <p>High-fidelity watermark removal through imperceptible micro-geometric perturbations, designed to preserve the visual identity of the underlying image.</p>
+              <div class="project-actions">
+                <a href="https://xiaoxikong.github.io/MarkCleaner/" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-link"></use></svg><span>Project page</span></a>
+                <a href="https://github.com/XiaoxiKong/MarkCleaner" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg><span>Source code</span></a>
+              </div>
             </div>
           </article>
           <article class="featured-project">
-            <h3>SLIM</h3>
-            <p>Stable Latent Integration for robust watermarking in diffusion models, balancing watermark resilience with generated-image quality.</p>
-
-            <div class="project-actions">
-              <a href="https://doi.org/10.1109/TCSVT.2026.3676184" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-papers"></use></svg><span>Read paper</span></a>
-              <a href="https://github.com/XiaoxiKong/SLIM" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg><span>Source code</span></a>
+            <a class="project-figure" href="slim-project.png" target="_blank" rel="noopener" aria-label="View full-size SLIM diagram"><img src="slim-project.png" alt="SLIM watermarking framework overview" width="2000" height="833" loading="lazy"></a>
+            <div class="project-copy">
+              <h3>SLIM</h3>
+              <p>Stable Latent Integration for robust watermarking in diffusion models, balancing watermark resilience with generated-image quality.</p>
+              <div class="project-actions">
+                <a href="https://doi.org/10.1109/TCSVT.2026.3676184" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-papers"></use></svg><span>Read paper</span></a>
+                <a href="https://github.com/XiaoxiKong/SLIM" target="_blank" rel="noopener"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-github"></use></svg><span>Source code</span></a>
+              </div>
             </div>
           </article>
         </div>
